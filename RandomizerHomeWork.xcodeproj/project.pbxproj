@@ -13,6 +13,7 @@
 		CF4EE1ED265CFC35007EC936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4EE1EB265CFC35007EC936 /* Main.storyboard */; };
 		CF4EE1EF265CFC39007EC936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4EE1EE265CFC39007EC936 /* Assets.xcassets */; };
 		CF4EE1F2265CFC39007EC936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4EE1F0265CFC39007EC936 /* LaunchScreen.storyboard */; };
+		CF4EE1FC265D15A1007EC936 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EE1FB265D15A1007EC936 /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CF4EE1EE265CFC39007EC936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF4EE1F1265CFC39007EC936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF4EE1F3265CFC39007EC936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF4EE1FB265D15A1007EC936 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CF4EE1EE265CFC39007EC936 /* Assets.xcassets */,
 				CF4EE1F0265CFC39007EC936 /* LaunchScreen.storyboard */,
 				CF4EE1F3265CFC39007EC936 /* Info.plist */,
+				CF4EE1FB265D15A1007EC936 /* AuthViewController.swift */,
 			);
 			path = RandomizerHomeWork;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4EE1FC265D15A1007EC936 /* AuthViewController.swift in Sources */,
 				CF4EE1EA265CFC35007EC936 /* ViewController.swift in Sources */,
 				CF4EE1E6265CFC35007EC936 /* AppDelegate.swift in Sources */,
 				CF4EE1E8265CFC35007EC936 /* SceneDelegate.swift in Sources */,
@@ -289,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59U3Y8MDY6;
 				INFOPLIST_FILE = RandomizerHomeWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59U3Y8MDY6;
 				INFOPLIST_FILE = RandomizerHomeWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

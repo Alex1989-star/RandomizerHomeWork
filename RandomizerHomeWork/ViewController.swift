@@ -8,11 +8,13 @@
 import UIKit
 
 
+
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+     
     @IBOutlet weak var userNameButton: UIButton!
     
     @IBOutlet weak var forgotPasswordButton: UIButton!
@@ -27,16 +29,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         passField.delegate = self
-        
         settingsForAlert()
+        
+        passField.returnKeyType = UIReturnKeyType.done
+        
+        
     }
     
     private func settingsForAlert() {
         alertName.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        //self.present(alertName, animated: true)
         
         alertPassword.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        //self.present(alertPassword, animated: true)
         
         alertError.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
     }
@@ -47,31 +50,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let welcome = segue.destination as? AuthViewController else { return }
+        
+          if nameField.text != "user" || passField.text != "123" {
+              self.present(alertError, animated: true, completion: nil)
+              
+              return
+          }
+        
+        guard let destination = segue.destination as? AuthViewController else { return }
+        destination.name = "Hello User"
+        
+    }
 
-     @IBAction func switchLogin() {
-        let alertError = UIAlertController(title: "Error", message: "Incorrect password or login", preferredStyle: UIAlertController.Style.alert)
-        
-        if nameField.text == "user" && passField.text == "123" {
-            performSegue(withIdentifier: "secondView", sender: nil)
-        } else {
-            self.present(alertError, animated: true, completion: nil)
-        }
-        
-        
+    @IBAction func switchLogin() {
+        passField.text = ""
+        nameField.text = ""
+    
+      
     }
     @IBAction func forgotUserNameButton() {
         let alertName = UIAlertController(title: "Oops!", message: "Your name is user", preferredStyle: .alert)
         alertName.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertName, animated: true)
-        
-    
     }
     
     @IBAction func tappedForgotPassword() {
         let alertPassword = UIAlertController(title: "Oops!", message: "Your password is 123", preferredStyle: .alert)
         alertPassword.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertPassword, animated: true)
-        
     }
 }
 

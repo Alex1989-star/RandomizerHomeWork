@@ -76,17 +76,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="fyL-lA-ldt"/>
+                                    <constraint firstAttribute="height" constant="33" id="mHa-H5-PVy"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nuL-3e-Lkf" secondAttribute="trailing" constant="55" id="0Z4-bO-RYd"/>
+                            <constraint firstItem="nuL-3e-Lkf" firstAttribute="top" secondItem="BXV-Iz-dQn" secondAttribute="bottom" constant="7.5" id="8hx-9Y-nQh"/>
                             <constraint firstItem="BXV-Iz-dQn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BcW-n6-ZTN"/>
                             <constraint firstItem="BXV-Iz-dQn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ty5-T5-4Lx"/>
-                            <constraint firstItem="nuL-3e-Lkf" firstAttribute="top" secondItem="BXV-Iz-dQn" secondAttribute="bottom" constant="7.5" id="tmu-1a-9kO"/>
-                            <constraint firstItem="nuL-3e-Lkf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="zob-x9-2z9"/>
+                            <constraint firstItem="nuL-3e-Lkf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YhX-Wc-qML"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7oH-2n-vPT"/>

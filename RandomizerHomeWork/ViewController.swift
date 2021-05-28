@@ -9,14 +9,13 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var passField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-     
-    @IBOutlet weak var userNameButton: UIButton!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var userNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
     let alertError = UIAlertController(title: "Error", message: "Incorrect password or login", preferredStyle: UIAlertController.Style.alert)
@@ -29,10 +28,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         passField.delegate = self
+        nameField.delegate = self
         settingsForAlert()
-        
         passField.returnKeyType = UIReturnKeyType.done
-        
         
     }
     
@@ -45,9 +43,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    
-        passField.resignFirstResponder()
-        
+        if textField == nameField {
+            passField.resignFirstResponder()
+        } else {
+            switchLogin()
+            performSegue(withIdentifier: "secondView", sender: nil)
+        }
         return true
     }
     
@@ -60,17 +61,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
               
               return
           }
+       // welcome.name = "Hello \(nameField)"
         
-        guard let destination = segue.destination as? AuthViewController else { return }
-        destination.name = "Hello User"
+       /* guard let destination = segue.destination as? AuthViewController else { return }
+        destination.name = "Hello User!"*/
         
     }
 
     @IBAction func switchLogin() {
         passField.text = ""
         nameField.text = ""
-    
-      
+        
     }
     @IBAction func forgotUserNameButton() {
         let alertName = UIAlertController(title: "Oops!", message: "Your name is user", preferredStyle: .alert)
@@ -84,5 +85,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.present(alertPassword, animated: true)
     }
 }
+
+extension ViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+}
+ 
 
 

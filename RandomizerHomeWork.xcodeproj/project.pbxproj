@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF40852A266129A500C331C1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF408529266129A500C331C1 /* ImageViewController.swift */; };
+		CF435CE0266236C80023BA9E /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF435CDF266236C80023BA9E /* UserInfoViewController.swift */; };
+		CF435CE42662998D0023BA9E /* professionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF435CE32662998D0023BA9E /* professionalViewController.swift */; };
 		CF4EE1E6265CFC35007EC936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EE1E5265CFC35007EC936 /* AppDelegate.swift */; };
 		CF4EE1E8265CFC35007EC936 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EE1E7265CFC35007EC936 /* SceneDelegate.swift */; };
 		CF4EE1EA265CFC35007EC936 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EE1E9265CFC35007EC936 /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF408529266129A500C331C1 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		CF435CDF266236C80023BA9E /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		CF435CE32662998D0023BA9E /* professionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = professionalViewController.swift; sourceTree = "<group>"; };
 		CF4EE1E2265CFC35007EC936 /* RandomizerHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomizerHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4EE1E5265CFC35007EC936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4EE1E7265CFC35007EC936 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF435CDA266221270023BA9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF435CE32662998D0023BA9E /* professionalViewController.swift */,
+				CF435CDF266236C80023BA9E /* UserInfoViewController.swift */,
+				CF408529266129A500C331C1 /* ImageViewController.swift */,
+				CF4EE1FB265D15A1007EC936 /* AuthViewController.swift */,
+				CF4EE1E9265CFC35007EC936 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CF435CDB266221810023BA9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF4EE1EE265CFC39007EC936 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF435CDC266221B60023BA9E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				CF4EE1F0265CFC39007EC936 /* LaunchScreen.storyboard */,
+				CF4EE1EB265CFC35007EC936 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		CF4EE1D9265CFC35007EC936 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +93,12 @@
 		CF4EE1E4265CFC35007EC936 /* RandomizerHomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				CF435CDC266221B60023BA9E /* StoryBoard */,
+				CF435CDB266221810023BA9E /* Resources */,
+				CF435CDA266221270023BA9E /* ViewControllers */,
 				CF4EE1E5265CFC35007EC936 /* AppDelegate.swift */,
 				CF4EE1E7265CFC35007EC936 /* SceneDelegate.swift */,
-				CF4EE1E9265CFC35007EC936 /* ViewController.swift */,
-				CF4EE1EB265CFC35007EC936 /* Main.storyboard */,
-				CF4EE1EE265CFC39007EC936 /* Assets.xcassets */,
-				CF4EE1F0265CFC39007EC936 /* LaunchScreen.storyboard */,
 				CF4EE1F3265CFC39007EC936 /* Info.plist */,
-				CF4EE1FB265D15A1007EC936 /* AuthViewController.swift */,
 			);
 			path = RandomizerHomeWork;
 			sourceTree = "<group>";
@@ -140,8 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF435CE42662998D0023BA9E /* professionalViewController.swift in Sources */,
 				CF4EE1FC265D15A1007EC936 /* AuthViewController.swift in Sources */,
+				CF435CE0266236C80023BA9E /* UserInfoViewController.swift in Sources */,
 				CF4EE1EA265CFC35007EC936 /* ViewController.swift in Sources */,
+				CF40852A266129A500C331C1 /* ImageViewController.swift in Sources */,
 				CF4EE1E6265CFC35007EC936 /* AppDelegate.swift in Sources */,
 				CF4EE1E8265CFC35007EC936 /* SceneDelegate.swift in Sources */,
 			);

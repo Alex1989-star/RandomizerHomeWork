@@ -29,7 +29,7 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        userName.text = "Hello User!"
+        userName.text = "Hello Alexey Shipilov!"
         
         //userName.text = name
         

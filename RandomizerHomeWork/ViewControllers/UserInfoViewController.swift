@@ -9,17 +9,18 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
+    @IBOutlet weak var userInfoText: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var textInfo: String!
         
-        
-    }
-    
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let imageVC = segue.destination as? ImageViewController else { return }*/
-        //imageVC.user = user
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            userInfoText.text = textInfo
         }
+}
+   
+    
+
 
 
     

@@ -9,7 +9,7 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    var name = ""
+    var userWelcomeName = ""
     @IBOutlet var userName: UILabel!
     
     private let primaryColor = UIColor(
@@ -29,9 +29,8 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        userName.text = "Hello Alexey Shipilov!"
-        
-        //userName.text = name
+        //userName.text = "Welcome, Alexey Shipilov!"
+        userName.text = "Welcome, \(userWelcomeName)!"
         
     }
     @IBAction func tappedLogOutButton() {

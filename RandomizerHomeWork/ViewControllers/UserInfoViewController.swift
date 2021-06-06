@@ -9,13 +9,19 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
-    @IBOutlet weak var userInfoText: UILabel!
+    @IBOutlet weak var strollsLabel: UILabel!
+    @IBOutlet weak var sportLabel: UILabel!
+    @IBOutlet weak var carLabel: UILabel!
     
-    var textInfo: String!
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            userInfoText.text = textInfo
+            changeBackground()
+            let data = Hobbies.getHobbies()
+            strollsLabel.text = data.strolls
+            sportLabel.text = data.sport
+            carLabel.text = data.car
+            
         }
 }
    

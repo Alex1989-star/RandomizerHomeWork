@@ -9,43 +9,24 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    var userWelcomeName = ""
-    @IBOutlet var userName: UILabel!
+    var userName: String!
+    var user = Person.getPerson()
+
     
-    private let primaryColor = UIColor(
-        red: 210/255,
-        green: 109/255,
-        blue: 128/255,
-        alpha: 1
-    )
-    private let secondaryColor = UIColor(
-        red: 107/255,
-        green: 148/255,
-        blue: 230/255,
-        alpha: 1
-    )
+    @IBOutlet weak var userNameLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        //userName.text = "Welcome, Alexey Shipilov!"
-        userName.text = "Welcome, \(userWelcomeName)!"
+        changeBackground()
+        userNameLabel.text = "Welcome, \(user.fullName)!"
         
     }
-    @IBAction func tappedLogOutButton() {
-        
-        dismiss(animated: true)
+
+    @IBAction func logoutButton(_ sender: Any) {
+    
+        dismiss(animated: true, completion: nil)
     }
 }
-extension UIView {
-    func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
-        let gradient = CAGradientLayer()
-        gradient.frame = bounds
-        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
-        gradient.locations = [0.0, 1.0]
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 0, y: 1)
-        layer.insertSublayer(gradient, at: 0)
-    }
-}
+

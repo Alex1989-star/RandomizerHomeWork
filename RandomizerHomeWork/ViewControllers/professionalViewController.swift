@@ -8,4 +8,10 @@ import UIKit
 
 class professionalViewControllers: UIViewController {
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        changeBackground()
+    }
 }
+
